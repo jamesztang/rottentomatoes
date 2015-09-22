@@ -70,8 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             if let dictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.movies = dictionary["movies"] as? NSArray
-                    self.movieTableView.reloadData()
-                }
+                    self.movieTableView.reloadData()                }
 //                NSLog("Dictionary: \(dictionary)")
             }
             else {
